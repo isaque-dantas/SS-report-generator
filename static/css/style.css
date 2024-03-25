@@ -1,0 +1,36 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    color: #F8F8F8;
+
+    width: 1024px;
+    height: 768px;
+
+    background: rgb(0, 43, 85);
+    background: radial-gradient(circle, rgba(0, 43, 85, 1) 0%, rgba(0, 60, 115, 1) 100%);
+}
+
+.table {
+    margin-top: 104px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table td {
+    font-size: 48px;
+    font-weight: 600;
+    background: transparent !important;
+    color: #F8F8F8 !important;
+}
+
+@page {
+    size: 1024px 768px;
+    margin: 0;
+}

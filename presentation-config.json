@@ -1,0 +1,19 @@
+[
+  {
+    "header": "Presentes",
+    "body": [
+      {
+        "label": "Professores",
+        "value": ["P. presentes", "totais"]
+      },
+      {
+        "label": "Alunos",
+        "value": ["A. presentes", "totais"]
+      },
+      {
+        "label": "Visitantes",
+        "value": ["V. presentes", "totais"]
+      }
+    ]
+  }
+]
