@@ -22,15 +22,40 @@
 </head>
 
 <body>
-<form action="">
-    <div class="w-50 p-3 mt-5 mx-auto">
+
+<div class="w-50 p-3 mt-5 mx-auto">
+    <form action="{{ url_for('index') }}" method="POST" enctype="multipart/form-data">
         <div class="mb-5">
             <label for="report" class="fw-medium">Relatório em PDF</label>
             <input type="file" name="report" id="report" class="form-control">
         </div>
-        <button id="generate-pdf-presentation" class="btn btn-outline-primary px-4 fw-bold">Gerar apresentação</button>
+        <button id="generate-pdf-presentation" type="submit" class="btn btn-outline-primary px-4 fw-bold">
+            Gerar apresentação
+        </button>
+    </form>
+    {% if reports %}
+    <div class="mt-5">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Nome do arquivo</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for report in reports %}
+                <tr>
+                    <td>{{ report }}</td>
+                    <td><a href="{{ url_for('download_report', report=report) }}" class="btn btn-primary fw-bold px-3">Baixar relatório</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-</form>
+    {% endif %}
+</div>
+
+<script src="{{ url_for('static', filename='js/send-form.js') }}"></script>
 </body>
 
 </html>

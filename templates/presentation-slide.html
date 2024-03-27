@@ -22,28 +22,22 @@
             integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href={{ url_for('static', filename="css/style.css") }}>
-    <script src={{ url_for('static', filename="js/generate-pdf-page.js") }} defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/generate-pdf-page.js') }}" defer></script>
 
 </head>
 
 <body>
 <div id="content" class="p-5 me-5">
-    <h1 class="display-1 fw-bold text-center">Presentes</h1>
+    <h1 class="display-1 fw-bold text-center" id="header">{{ header }}</h1>
     <table class="table">
         <tbody>
-        <tr>
-            <td>Professores</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>Alunos</td>
-            <td>63</td>
-        </tr>
-        <tr>
-            <td>Visitantes</td>
-            <td>15</td>
-        </tr>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row['label'] }}</td>
+                    <td>{{ row['data'] }}</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 </div>

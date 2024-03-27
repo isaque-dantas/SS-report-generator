@@ -3,16 +3,40 @@
     "header": "Presentes",
     "body": [
       {
-        "label": "Professores",
-        "value": ["P. presentes", "totais"]
+        "label": "Matriculados",
+        "value": {
+          "column": "Matriculados",
+          "index": 10
+        }
       },
       {
         "label": "Alunos",
-        "value": ["A. presentes", "totais"]
+        "value": {
+          "column": "A. Presentes",
+          "index": 10
+        }
       },
       {
-        "label": "Visitantes",
-        "value": ["V. presentes", "totais"]
+        "label": "Professores",
+        "value": {
+          "column": "P. Presentes",
+          "index": 10
+        }
+      }
+    ]
+  },
+  {
+    "header": "Classes destaque",
+    "body": [
+      {
+        "label": "Qtd. presente",
+        "max_column": "T. Presentes",
+        "target": "Sala"
+      },
+      {
+        "label": "% presente",
+        "max_column": "Percentual",
+        "target": "Sala"
       }
     ]
   }

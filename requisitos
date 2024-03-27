@@ -1,0 +1,15 @@
+Matriculados, alunos presentes, professores presentes
+Classe destaque em presença, classe destaque em % de assistência
+A assistência é dada pelo total presentes / total matriculados
+
+0   Sala                11 non-null     object
+1   Matriculados        11 non-null     object
+2   A. Presentes        11 non-null     object
+3   P. Presentes        11 non-null     object
+4   T. Presentes        11 non-null     object
+5   Percentual          11 non-null     object
+6   V. Evangélicos      11 non-null     object
+7   V. não Evangélicos  11 non-null     object
+8   Assistência Total   11 non-null     object
+9   Bíblias             11 non-null     object
+10  Revistas            11 non-null     object
